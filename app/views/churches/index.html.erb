@@ -1,0 +1,16 @@
+<h1> Welcome Church </h1>
+<table>
+<tr>
+<strong> <th> Name </th> <th> Location </th> </strong>
+</tr>
+<% @churches.each do |f| %>
+<tr>
+<td> <%= f.name %></td>
+<td> <%= f.location %></td>
+<td> <%= link_to "Edit", edit_church_path(f.id) %> </td>
+<td> <%= link_to "Show", church_path(f.id)  %> </td>
+<td> <%= link_to "Destroy", {action: :destroy, id: f.id}, method: :delete, data: {confirm: 'Are you Sure?'}  %> </td>
+<% end %>
+</table>
+<br><br>
+<%= link_to "Add New Church", new_church_path %>

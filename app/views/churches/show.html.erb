@@ -1,0 +1,38 @@
+<h1> Show Church Details </h1>
+
+<strong> Name: </strong>
+<%= @church.name %><br>
+<strong>Location: </strong>
+<%= @church.location %>
+<br>
+
+<h2>Event Details</h2> 
+<table>
+<tr>
+<th>Name</th><th>Descrption</th>
+</tr>
+<% @church.events.each do |f| %> 
+<tr>
+<td><%= f.name %></td> 
+<td><%= f.desc %> </td>
+<td><%= link_to 'Destroy Event', [f.church, f], method: :delete, data: { confirm: 'Are you sure?' } %> </td>
+</tr>
+<% end %> 
+</table>
+
+<h2> Add Church Events </h2>
+<%= form_for ([@church, @church.events.build]) do |f| %>
+<p>
+<%= f.label :name %><br>
+<%= f.text_field :name %>
+</p>
+<p>
+<%= f.label :desc %><br>
+<%= f.text_area :desc %>
+</p>
+<p>
+<%= f.submit%>
+</p>
+<% end %>
+<br>
+<%= link_to "Home", churches_path %>

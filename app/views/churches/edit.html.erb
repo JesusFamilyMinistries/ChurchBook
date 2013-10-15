@@ -1,0 +1,32 @@
+<h1> Edit Church Details </h1>
+
+<%= form_for @church do |f| %>
+<% if @church.errors.any? %>
+<div id="error_explanation">
+<h2><%= pluralize(@church.errors.count, "error") %> prohibited
+this church from being saved:</h2>
+<ul>
+<% @church.errors.full_messages.each do |msg| %>
+<li><%= msg %></li>
+<% end %>
+</ul>
+</div>
+<% end %>
+
+<p>
+<%= f.label :name %><br>
+<%= f.text_field :name %>
+</p>
+
+<p>
+<%= f.label :location %><br>
+<%= f.text_area :location %>
+</p>
+
+<p>
+<%= f.submit%>
+</p>
+
+<% end %>
+
+<%= link_to "Home", churches_path %>
