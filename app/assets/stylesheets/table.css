@@ -6,14 +6,16 @@ www.roscripts.com
 table {
   width: 75%;
   border-collapse:collapse;
-  background:#EFF4FB ;
-  border-left:1px solid #686868;
-  border-right:1px solid #686868;
+  /*background:#EFF4FB ;*/
+  /*border-left:1px solid #686868;*/
+  /*border-right:1px solid #686868;*/
+  border-bottom: dotted 1px #333;
   font:0.8em/145% 'Trebuchet MS',helvetica,arial,verdana;
   color: #333;
 }
 
 td, th {
+  width:50%;
   padding:5px;
 }
 
@@ -55,14 +57,6 @@ thead th, tfoot th, tfoot td {
   color:#fff
 }
 
-tr .blank {
-  border-left: 1px solid #fff;
-  border-right: 1px solid #fff;
-  background:#fff ;
-}
-
-
-
 tfoot td {
   text-align:right
 }
@@ -71,10 +65,12 @@ tfoot td {
 ----------------------------------------------- */
 
 tbody th, tbody td {
-  border-bottom: dotted 1px #333;
+  /*border-bottom: dotted 1px #333;*/
 }
 
 tbody th {
+  text-align:left;
+  font-size:20px;
   white-space: nowrap;
 }
 
@@ -84,6 +80,6 @@ tbody th a {
 
 .odd {}
 
-tbody tr:hover {
+table :hover {
   background:#fafafa
 }

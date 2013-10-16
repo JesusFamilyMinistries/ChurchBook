@@ -1,9 +1,5 @@
-<table align=center>
 <% @events.reverse.each do |event| %>
-  <tr >
-    <td class=blank colspan="2">&nbsp;</td>  
-  </tr>
-
+<table align=center>
   <tr>
      <th colspan="2">
       <%=event.name %>
@@ -22,5 +18,5 @@
       <b>Address: </b><%= event.church.location %>
     </td>
   </tr>
-<% end %>
 </table>
+<% end %>
