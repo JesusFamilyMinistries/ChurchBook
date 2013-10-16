@@ -1,0 +1,26 @@
+<table align=center>
+<% @events.reverse.each do |event| %>
+  <tr >
+    <td class=blank colspan="2">&nbsp;</td>  
+  </tr>
+
+  <tr>
+     <th colspan="2">
+      <%=event.name %>
+    </th>
+  </tr>
+  <tr>
+    <td>
+      <b>Description: </b><%= event.desc %>
+    </td>
+    <td>
+      <b>Where: </b><%= event.church.name %>
+    </td>
+  </tr>
+  <tr>
+    <td colspan=2>
+      <b>Address: </b><%= event.church.location %>
+    </td>
+  </tr>
+<% end %>
+</table>

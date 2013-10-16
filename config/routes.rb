@@ -3,7 +3,7 @@ Mail::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'churches#index'
+  root 'application#index'
 
   resources :churches do
     resources :events
